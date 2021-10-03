@@ -18,7 +18,7 @@ def load_products_table():
 
 
     # insert all rows into the products table
-    products = pd.read_excel('datasets/supermarket_products.xlsx')
+    products = pd.read_excel('datasets/supermarket_products.xlsx', engine='openpyxl')
     dbu.insert_data(database='supermarket.db', 
                 table='products', 
                 data=products)
